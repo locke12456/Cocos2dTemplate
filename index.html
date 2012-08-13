@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <title>Cocos2d-HTML5 Hello World</title>
+</head>
+<body style="text-align: center;background: #f2f6f8;">
+
+<script src="jquery.min.js"></script>
+<script src="cocos2d.js"></script>
+<script type="text/javascript">
+    $(function () {
+        center("canvas");
+    });
+    function setPostion(id, offsetX, offsetY) {
+        var item = $('#' + id);
+        var left = parseInt(offsetX);
+        var top = parseInt(offsetY);
+        $(item).css("left", left);
+        $(item).css("top", top);
+    }
+    function center(id) {
+        var item = $('#' + id);
+        var winWidth = $(window).width();
+        var winHeight = $(window).height();
+        var popwidth = item.width();
+        var popheight = item.height();
+        var left = winWidth / 2 - popwidth / 2;
+        var top = winHeight / 2 - popheight / 2;
+        $(item).css("left", left);
+        $(item).css("top", top);
+    }
+</script>
+<div id="canvas"
+     style="display:inline-block;height:400px; position: fixed; border-collapse: collapse; border:3px solid black; border-radius: 5px; box-shadow: 0 5px 50px #333;z-index:1">
+    <canvas id="gameCanvas" width="550" height="400"></canvas>
+</div>
+</body>
+</html>
