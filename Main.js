@@ -78,9 +78,9 @@ Main.sharedLayer = function () {
         return Main.node();
 };
 /*
- 'index.html' → 'cocos2d.js'                         →　  'AppDelegate.js'        →           'Main.js'
- ↓(cc.loadjs) part 1 程式加載                ↓(初始化Main.js)                 ↓(遊戲執行)
- '引擎相關Class'                                 next step                          end
+ 'index.html' → 'cocos2d.js'                         →　  'AppDelegate.js'              →           'Main.js'
+ ↓(cc.loadjs) part 1 程式加載                   ↓(初始化Main.js)                 ↓(遊戲執行)
+ '引擎相關Class'                                        next step                                  end
  'Main.js'
  'AppDelegate.js'　
  ↓(cc.loadjs) part 2 影音加載
